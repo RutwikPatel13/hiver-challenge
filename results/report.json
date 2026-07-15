@@ -1,0 +1,1653 @@
+{
+  "overall": {
+    "n": 60,
+    "mean_composite": 0.831,
+    "median_composite": 0.85,
+    "pass_rate": 0.9,
+    "per_dimension_mean_1to5": {
+      "intent_resolution": 3.867,
+      "factual_correctness": 4.833,
+      "faithfulness": 4.833,
+      "completeness": 3.417,
+      "tone": 4.717
+    },
+    "hard_flag_rate": {
+      "hallucination_detected": 0.017,
+      "contradicts_reference_commitment": 0.0
+    },
+    "composite_distribution": {
+      "0.0-0.5": 1,
+      "0.5-0.7": 5,
+      "0.7-0.85": 15,
+      "0.85-1.0": 39
+    },
+    "human_reference_baseline": {
+      "note": "human-sent replies scored reference-free on the same rubric — a hard-data sanity anchor for the system score",
+      "mean_composite": 0.487,
+      "median_composite": 0.49,
+      "pass_rate": 0.133
+    }
+  },
+  "per_response": [
+    {
+      "id": "t0000",
+      "category": "technical",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.145,
+      "human_reference_composite": 0.65,
+      "reply": "I'm really sorry to hear your watch has stopped working again—that's frustrating, especially after it happened before. We want to make this right for you. Could you tell me a bit more about what's happening with the watch (for example, won't turn on, display issue, etc.) and roughly when the first problem occurred? Once I understand the full picture, I'll get you sorted with a replacement or repair right away.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the core frustration and commits to resolution, but stops short of immediately offering a concrete next step—it asks for more information first, which is reasonable but delays actual resolution.",
+        "factual_correctness": "The candidate makes no specific factual claims (no order numbers, dates, or policies) and remains internally consistent with the incoming email's complaint.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or specific promises; it appropriately offers general remedies (replacement or repair) contingent on understanding the issue better.",
+        "completeness": "The reply addresses the main complaint (watch not working a second time) and asks clarifying questions, but does not explicitly acknowledge the customer's frustration about the product quality or their comment about being 'stupid to buy'—a brief validation of that sentiment would have been more complete.",
+        "tone": "The tone is empathetic, professional, and appropriately acknowledges frustration without being defensive; it validates the customer's experience and conveys genuine intent to help."
+      }
+    },
+    {
+      "id": "t0001",
+      "category": "technical",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.133,
+      "human_reference_composite": 0.71,
+      "reply": "I'm sorry you're still experiencing this issue even after reinstalling—that's frustrating. We've escalated this to our technical team to investigate what's causing the error in the app. In the meantime, you may be able to access your account through a web browser as a temporary workaround. Our team will work to get this resolved as quickly as possible, and we'll follow up with you as soon as we have an update.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and commits to escalation and follow-up, but does not ask clarifying questions about the specific error, which would be needed to fully resolve the issue.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it offers general troubleshooting (web browser workaround) and escalation without inventing details.",
+        "faithfulness": "The reply avoids inventing policies, timelines, or specific promises; it appropriately commits only to escalation and follow-up without overcommitting.",
+        "completeness": "The reply addresses the core issue (app error after reinstall) but does not ask for the specific error message or details that would help the technical team, leaving a gap in information gathering.",
+        "tone": "The tone is empathetic, professional, and appropriately acknowledges the customer's frustration while offering reassurance and a concrete next step."
+      }
+    },
+    {
+      "id": "t0002",
+      "category": "technical",
+      "composite": 0.6,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 4,
+        "faithfulness": 4,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.041,
+      "human_reference_composite": 0.2,
+      "reply": "Thanks for reaching out. I understand how frustrating it is when useful information gets removed from an app—unfortunately, I don't have details about the specific changes made in version 11.1 or Apple's App Store display options on my end. Your best bet would be to contact our Aftersales team via Live Chat or phone at 0344 556 5650, and they can look into what happened with that feature and help you find the information you need.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration but deflects to another team rather than attempting to answer the core question about how to see update sizes or explaining the removal.",
+        "factual_correctness": "The candidate appropriately avoids inventing specific details about version 11.1 changes and correctly directs to a support channel, though the phone number should be verified for accuracy.",
+        "faithfulness": "The reply avoids hallucinating specific policies or features, though it could have offered more general guidance about App Store functionality without claiming certainty.",
+        "completeness": "The reply addresses only the routing aspect and does not attempt to answer either of the customer's two questions: how to see update sizes or why the information was removed.",
+        "tone": "The tone is empathetic and professional, appropriately acknowledging the customer's frustration, though the deflection may feel dismissive."
+      }
+    },
+    {
+      "id": "t0003",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.071,
+      "human_reference_composite": 0.29,
+      "reply": "Hi there. I'd be happy to help you find that information. To give you the exact departure time for the train at Platform 14, could you let me know what date you're travelling? Once I have that, I can look up the specific service for you.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately seeks the missing information (travel date) needed to answer the customer's question, though it does not yet provide the actual departure time.",
+        "factual_correctness": "The candidate makes no factual claims that could be incorrect; it only asks a clarifying question.",
+        "faithfulness": "The reply does not invent any policies, times, or promises—it simply requests necessary information to help.",
+        "completeness": "The customer asked for a specific departure time, but the candidate does not provide it; instead it defers pending a date, leaving the core question unanswered.",
+        "tone": "The tone is professional, helpful, and courteous, with appropriate empathy ('I'd be happy to help')."
+      }
+    },
+    {
+      "id": "t0004",
+      "category": "shipping",
+      "composite": 0.82,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.217,
+      "human_reference_composite": 0.56,
+      "reply": "I'm sorry to hear about the rough handling of your sister's package—that's frustrating, and I understand your concern about potential damage. Please let us know if the item arrived broken or if there are any issues with what was inside. If there is damage, we're happy to help make it right. You can reply here with details, and we'll get it sorted for you.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately invites the customer to report damage and offers help, but stops short of proactively investigating the delivery behavior or committing to address the carrier conduct issue the customer witnessed.",
+        "factual_correctness": "The reply makes no unsupported factual claims and remains internally consistent with the situation described in the incoming email.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or promises beyond what is reasonable (damage assessment and resolution if warranted).",
+        "completeness": "The reply addresses the damage concern but does not acknowledge or respond to the customer's broader complaint about the delivery driver's rough handling behavior across multiple locations, which was a key part of their frustration.",
+        "tone": "The tone is empathetic and professional, appropriately acknowledging frustration, though it could have been slightly more validating of the customer's concern about the carrier's conduct."
+      }
+    },
+    {
+      "id": "t0005",
+      "category": "technical",
+      "composite": 0.86,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.105,
+      "human_reference_composite": 0.42,
+      "reply": "Hi there! I'm sorry you're experiencing trouble connecting. That \"Access Denied\" error typically indicates a permissions issue with your account or session. A few quick things to try: refresh your browser, clear your cache, or try a different browser or device. If you're still seeing that error after those steps, please reply with your account email address and I can escalate this to our technical team to investigate further.",
+      "reasons": {
+        "intent_resolution": "The reply addresses the customer's error and offers troubleshooting steps plus escalation, but doesn't fully resolve the immediate panic or provide a clear next step timeline.",
+        "factual_correctness": "The explanation of 'Access Denied' as a permissions issue is technically sound and the troubleshooting suggestions are standard and appropriate.",
+        "faithfulness": "The reply avoids inventing specific policies, refund amounts, or unsupported promises; it sticks to general troubleshooting and a reasonable escalation path.",
+        "completeness": "The reply addresses the error and offers solutions, but doesn't acknowledge the customer's stated panic or the specific reference ID they provided in the error message.",
+        "tone": "The tone is professional and empathetic ('I'm sorry you're experiencing trouble'), though it could be slightly warmer given the customer's evident distress ('Panic!')."
+      }
+    },
+    {
+      "id": "t0006",
+      "category": "general",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.085,
+      "human_reference_composite": 0.61,
+      "reply": "I appreciate you reaching out, but it sounds like you may have contacted the wrong company—we're not Lyft. If you're having trouble with a Lyft ride, I'd recommend reaching out to Lyft's support team directly through their app or website so they can help resolve this with your driver right away.",
+      "reasons": {
+        "intent_resolution": "The reply correctly identifies the core issue (wrong company contacted) and provides the appropriate next step (contact Lyft directly), which resolves the customer's ability to get help.",
+        "factual_correctness": "The reply is internally consistent and factually sound—it correctly identifies that this is a Lyft issue, not an issue for the support team receiving the email.",
+        "faithfulness": "The reply makes no unsupported claims or invented policies; it simply clarifies the company boundary and directs the customer appropriately.",
+        "completeness": "The incoming email contains one core complaint (driver doesn't know how to get to the house), and the reply addresses it by routing to the correct company that can actually help.",
+        "tone": "The tone is professional, courteous, and empathetic—acknowledging the customer's frustration while helpfully redirecting them without dismissiveness."
+      }
+    },
+    {
+      "id": "t0007",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.143,
+      "human_reference_composite": 0.71,
+      "reply": "Thanks for reaching out! To permanently delete items from your recently played list, you can typically access this through your library settings or account preferences—the exact steps depend on which platform or service you're using. Could you let me know which app or service you're referring to so I can give you the most accurate guidance?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's question and offers to help, but defers providing the actual solution by asking for clarification rather than attempting to resolve the issue directly.",
+        "factual_correctness": "The candidate correctly notes that deletion steps vary by platform and appropriately asks for clarification before providing specific instructions, which is factually sound.",
+        "faithfulness": "The reply makes no unsupported claims or invented policies; it only offers general guidance and requests necessary information to provide accurate help.",
+        "completeness": "While the reply addresses the core question, it does not provide any concrete steps or examples that might help the customer immediately, leaving the issue unresolved pending their response.",
+        "tone": "The tone is friendly, professional, and helpful, with appropriate acknowledgment of the customer's question and a collaborative approach to finding the right solution."
+      }
+    },
+    {
+      "id": "t0008",
+      "category": "technical",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.083,
+      "human_reference_composite": 0.6,
+      "reply": "Hi there, thanks for reaching out! Setting up a default page in your Azure WebApp is straightforward—you'll want to make sure your default document (like index.html) is named correctly and placed in the root directory of your site. Azure typically looks for files like index.html, default.html, or default.htm in order of priority.\n\nA few things to check: First, verify that your HTML file is actually in the root folder (not in a subfolder) where you uploaded it via FTP. Second, check your WebApp's application settings to confirm the default document is configured—you can do this in the Azure portal under your WebApp's Configuration settings. If you've already set a default document there and it's still not working, let me know what error you're seeing or what happens when you visit your site, and I'll help troubleshoot further.",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's question about how to set up a default page in Azure WebApp with clear, actionable steps.",
+        "factual_correctness": "The technical guidance about default document naming (index.html, default.html, default.htm) and placement in the root directory is accurate for Azure WebApp configuration.",
+        "faithfulness": "The reply provides general technical guidance without inventing specific policies, order numbers, or unsupported promises; all statements are consistent with standard Azure WebApp behavior.",
+        "completeness": "The reply covers the customer's core question about setting up a default page and provides multiple troubleshooting angles (file naming, location, portal configuration, and offer for further help).",
+        "tone": "The tone is professional, helpful, and empathetic—acknowledging the customer's issue and offering continued support if needed."
+      }
+    },
+    {
+      "id": "t0009",
+      "category": "complaint",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.056,
+      "human_reference_composite": 0.54,
+      "reply": "Thanks for getting in touch, and I'm sorry you're having a frustrating experience. I'd like to help track down what's going on and get it sorted for you. Could you give me a bit more detail about what problems you're running into? Once I understand what's happening, I'll do my best to find a solution.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately seeks clarification but cannot resolve the customer's complaint without understanding the specific problems, leaving the core issue unaddressed.",
+        "factual_correctness": "The reply makes no specific factual claims and contains no internal contradictions or unsupported assertions.",
+        "faithfulness": "The reply avoids inventing policies, prices, or promises and stays within appropriate bounds of what a support agent can offer.",
+        "completeness": "The incoming email is vague and lacks detail, but the candidate does not acknowledge the customer's frustration or validate their experience before asking for more information, missing an opportunity to show empathy upfront.",
+        "tone": "The tone is professional and empathetic, appropriately acknowledging frustration, though it could be slightly warmer given the customer's evident irritation."
+      }
+    },
+    {
+      "id": "t0010",
+      "category": "technical",
+      "composite": 0.75,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.099,
+      "human_reference_composite": 0.34,
+      "reply": "Hi there! Thank you for reaching out. We understand your concern about unexpected services on your lines. To help you deactivate any active data bundles or services on 08051148842 and 09052236815, we'll need to look into your account details. Please reply with any additional information you can provide, and we'll get this sorted for you right away.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's request to deactivate services but does not commit to or complete the deactivation—it only asks for more information, leaving the core request unresolved.",
+        "factual_correctness": "The reply correctly identifies the two phone numbers provided and accurately describes the customer's concern without stating any unsupported facts.",
+        "faithfulness": "The reply makes no invented promises, policies, or specific commitments beyond offering to investigate and help, which is appropriate given the request.",
+        "completeness": "The reply addresses the deactivation request and acknowledges both phone numbers, but does not explain what specific information is needed or provide a clear next step for resolution.",
+        "tone": "The tone is professional and empathetic, appropriately acknowledging the customer's concern, though it could be slightly more reassuring given the customer's request for prompt action."
+      }
+    },
+    {
+      "id": "t0011",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.095,
+      "human_reference_composite": 0.57,
+      "reply": "I'm really sorry to hear about this distressing experience—that's absolutely not acceptable, especially for a passenger with medical needs. We take these concerns very seriously.\n\nTo help us investigate and make this right, could you please share your booking reference or ticket number, along with the train route and date of travel? Once I have those details, I can look into what happened with the facilities and connect you with the right team to address this properly.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the serious concern and commits to investigating, but stops short of offering concrete resolution (e.g., compensation, formal complaint process) without first gathering details.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it appropriately requests information before committing to facts.",
+        "faithfulness": "The reply avoids inventing policies, compensation amounts, or specific remedies, instead asking for details needed to proceed appropriately.",
+        "completeness": "The reply addresses the core complaint but does not acknowledge or respond to the specific mention of the passenger being diabetic and distressed, which warrants explicit recognition of the medical/accessibility angle.",
+        "tone": "The tone is empathetic, takes the complaint seriously, and appropriately validates the customer's distress while remaining professional."
+      }
+    },
+    {
+      "id": "t0012",
+      "category": "shipping",
+      "composite": 0.66,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 4,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.173,
+      "human_reference_composite": 0.27,
+      "reply": "We understand your concern about the tight delivery window. To help you best, could you please share your order number and the address where the package should be delivered? In the meantime, if you're worried about missing the delivery, you can try to be available during the estimated window or let us know if there's a specific issue preventing delivery to your door—we'll work with our delivery team to find a solution.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's concern but does not directly resolve the urgent delivery issue; instead it asks for information and offers vague next steps rather than concrete action or reassurance.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it stays general and does not contradict any facts in the incoming email.",
+        "faithfulness": "The reply avoids inventing policies or promises, though the suggestion to 'work with our delivery team to find a solution' is somewhat vague and could be more specific about what is actually possible.",
+        "completeness": "The incoming email is fragmented and unclear, but the core issue is an urgent delivery problem with only 2.5 hours remaining; the candidate does not address whether the delivery can still be made or offer concrete alternatives like rescheduling or pickup options.",
+        "tone": "The tone is professional and empathetic, appropriately acknowledging the customer's frustration, though it could be more urgent and action-oriented given the time-sensitive nature of the complaint."
+      }
+    },
+    {
+      "id": "t0013",
+      "category": "shipping",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.205,
+      "human_reference_composite": 0.85,
+      "reply": "Hi! Thanks for reaching out. To help you track down your 1-hour delivery slot, could you share your order number? Once I have that, I can look up the latest status and let you know when you should expect the notification with your specific time window.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately addresses the customer's question about when they'll receive their 1-hour delivery slot notification, but defers the actual answer pending additional information rather than providing immediate guidance.",
+        "factual_correctness": "The reply makes no unsupported factual claims and correctly understands the customer's situation (flexi delivery with a 4-hour window, awaiting a 1-hour slot notification).",
+        "faithfulness": "The reply avoids inventing policies, timelines, or promises; it simply offers to look up the status once given the order number, which is a reasonable and supportable commitment.",
+        "completeness": "The reply addresses the core question about when the customer will receive their slot notification, but doesn't provide any general guidance on typical timeframes or next steps if the notification is delayed.",
+        "tone": "The tone is friendly, professional, and appropriately helpful—using 'Thanks for reaching out' and offering concrete assistance without being dismissive of the customer's concern."
+      }
+    },
+    {
+      "id": "t0014",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.078,
+      "human_reference_composite": 0.66,
+      "reply": "Morning! Thanks for reaching out. We appreciate your interest in supporting charity events. I don't have details on our current donation or sponsorship programs for charity races readily available, but this is definitely something worth exploring with our team. Could you let me know a bit more about the event you're organizing—such as the date, location, and the type of support you're looking for—and I'll get you connected with the right person who can discuss what we might be able to do to help?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's question about charity event support and commits to exploring the possibility, but stops short of providing a definitive answer or clear next steps for resolution.",
+        "factual_correctness": "The candidate makes no specific factual claims that could be incorrect; it appropriately avoids inventing policies or commitments without knowledge.",
+        "faithfulness": "The reply does not invent any policies, donation amounts, or specific programs; it honestly states lack of immediate details and offers to connect with the appropriate team.",
+        "completeness": "The reply addresses the core question about charity event support but could have been more complete by asking about the specific type of tickets or support needed (e.g., quantity, event size, timeline).",
+        "tone": "The tone is warm, appreciative, and professional—appropriately welcoming to a potential partnership inquiry without overpromising."
+      }
+    },
+    {
+      "id": "t0015",
+      "category": "general",
+      "composite": 0.74,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.061,
+      "human_reference_composite": 0.47,
+      "reply": "I understand how frustrating it is to be without your OnePlus 5T for over a week—I'm sorry you're experiencing this delay. To help get this resolved quickly, could you share your order number and let me know what specifically is holding up delivery (for example, is it stuck in transit, pending payment, or something else)? Once I have those details, I'll be able to look into what's happening and work toward getting this sorted for you right away.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the frustration and promises to help, but does not actually resolve the issue or commit to a specific remedy—it only requests information to begin investigating.",
+        "factual_correctness": "The candidate makes no specific factual claims about policies, dates, or amounts, and remains internally consistent with the incoming email's context.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or promises beyond offering to investigate and help resolve the situation.",
+        "completeness": "The customer's core concern is that they have been without their product for over a week and want to know who will bear the loss, but the reply does not address the loss/compensation question or provide any timeline for resolution.",
+        "tone": "The tone is empathetic, acknowledges the customer's frustration, and maintains a professional, helpful demeanor appropriate for a complaint."
+      }
+    },
+    {
+      "id": "t0016",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.112,
+      "human_reference_composite": 0.27,
+      "reply": "Hi there,\n\nThanks for reaching out about the printhead issue with your HP Officejet Pro 8100. I'd like to help get this resolved for you. To best assist, could you let me know a bit more about what you're experiencing—is the printhead physically missing, or are you seeing error messages indicating a failure? Also, have you already tried any troubleshooting steps like cleaning the printhead or running a diagnostic?\n\nIn the meantime, you can also reach out to our support team directly through a private message with your serial number and we can explore replacement or repair options for you.\n\nThanks,\n[Support Team]",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the printhead issue and offers to help, but stops short of committing to a concrete resolution path—it asks clarifying questions rather than moving toward a definitive next step like replacement or repair.",
+        "factual_correctness": "The candidate makes no specific factual claims about policies, pricing, or procedures that could be incorrect; all statements are appropriately general and internally consistent.",
+        "faithfulness": "The reply avoids inventing specific policies, refund amounts, or guarantees; it only offers general troubleshooting guidance and mentions exploring 'replacement or repair options' without overpromising.",
+        "completeness": "The incoming email is sparse and provides no specific details about the nature of the problem, so the candidate reasonably asks clarifying questions, but does not fully commit to a resolution path or explain what the next concrete steps will be after information is provided.",
+        "tone": "The tone is professional, empathetic, and helpful—acknowledging the customer's issue, offering assistance, and inviting further communication in a friendly manner."
+      }
+    },
+    {
+      "id": "t0017",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.163,
+      "human_reference_composite": 0.5,
+      "reply": "We're really sorry to hear about the delay—that's frustrating, especially when you chose what seemed like the best option. While we can't control mechanical issues with the aircraft, we'd like to make this right. Could you share your booking confirmation number or the phone number on your account so we can look into what happened and discuss how we can help?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the delay complaint and offers to investigate and help, but stops short of committing to a specific resolution (refund, credit, rebooking) that the customer's frustrated tone suggests they may be seeking.",
+        "factual_correctness": "The reply makes no unsupported factual claims and correctly acknowledges that mechanical aircraft issues are typically outside the airline's direct control.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or specific remedies; it appropriately asks for information before committing to a course of action.",
+        "completeness": "The reply addresses the core complaint (3-hour delay due to plane issues) and requests booking details, but does not explicitly acknowledge or respond to the customer's implicit concern about the value proposition ('cheapest ticket' vs. poor outcome).",
+        "tone": "The tone is empathetic, acknowledges frustration, and maintains professionalism while showing willingness to help—appropriate for a service failure complaint."
+      }
+    },
+    {
+      "id": "t0018",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.127,
+      "human_reference_composite": 0.75,
+      "reply": "Hi there, I'm sorry you're running into trouble completing your upgrade order—that's frustrating. I can see you've attached an image of the issue, which is really helpful. This sounds like it could be a browser or payment processing glitch. A few quick things to try: clear your browser cache and cookies, try a different browser if you have one handy, or attempt the order on a mobile device if you were using a computer (or vice versa). If you're still stuck after that, please reach out to our support team directly and they'll be able to walk through this with you in real time and get your upgrade sorted.",
+      "reasons": {
+        "intent_resolution": "The reply addresses the customer's core issue (stuck payment page) and offers practical troubleshooting steps, but stops short of committing to a direct resolution path or escalation timeline.",
+        "factual_correctness": "The candidate makes no specific factual claims about policies, dates, or amounts; all suggestions (clearing cache, trying different browsers/devices) are standard and internally consistent.",
+        "faithfulness": "The reply avoids inventing policies or promises; it offers general troubleshooting guidance and appropriately defers to the support team for hands-on help without overcommitting.",
+        "completeness": "The reply covers the main issue and offers multiple troubleshooting paths, but does not explicitly acknowledge or address the attached image beyond a brief mention, nor does it confirm receipt of the image or offer to review it directly.",
+        "tone": "The tone is empathetic, professional, and appropriately reassuring for a frustrated customer experiencing a technical issue."
+      }
+    },
+    {
+      "id": "t0019",
+      "category": "shipping",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.163,
+      "human_reference_composite": 0.89,
+      "reply": "I'm sorry to hear your order shipped despite the cancellation request—that's frustrating. I'd be happy to help you refuse those packages. To look into this, could you please share the order number or the phone number associated with your account? Once I have that, I can check on the shipment details and walk you through the best way to handle the refusal.",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's request to help refuse packages and offers concrete next steps to resolve the issue.",
+        "factual_correctness": "The reply makes no unsupported factual claims and remains internally consistent with the situation described.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or promises—it simply acknowledges the problem and requests necessary information to help.",
+        "completeness": "The reply addresses the customer's core request (help refusing packages) and asks for the information needed to proceed, covering all aspects of the incoming email.",
+        "tone": "The tone is empathetic (acknowledging frustration), professional, and helpful—appropriate for a customer service interaction on a complaint."
+      }
+    },
+    {
+      "id": "t0020",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.089,
+      "human_reference_composite": 0.55,
+      "reply": "I hear your frustration—crew logistics issues that delay flights are genuinely aggravating, especially when the plane is ready to go. While we appreciate you acknowledging our response, I understand that doesn't solve the core problem of getting you where you need to be on time. Since this involves SkyWest operations, I'd recommend reaching out to them directly about scheduling and staffing concerns, as those decisions fall outside our control. That said, if there's anything we can help with on our end regarding your booking or experience, please let me know.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and offers a path forward (contacting SkyWest directly), but stops short of proposing concrete next steps or compensation review that might fully resolve the underlying service failure.",
+        "factual_correctness": "The candidate correctly identifies that crew logistics fall under SkyWest's purview and appropriately defers to them without making unsupported claims about policies or procedures.",
+        "faithfulness": "The reply avoids inventing specific policies, refund amounts, or promises; it stays grounded in what the sender can reasonably offer (help with booking/experience) and what they cannot control (SkyWest staffing).",
+        "completeness": "The reply addresses the core complaint about crew logistics and the frustration, but does not explicitly ask clarifying questions about whether the customer missed their flight, needs rebooking, or seeks compensation—details that would help fully resolve the issue.",
+        "tone": "The tone is empathetic, validating the customer's frustration while remaining professional and constructive; it acknowledges the backhanded compliment gracefully without becoming defensive."
+      }
+    },
+    {
+      "id": "t0021",
+      "category": "general",
+      "composite": 0.68,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 4,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.122,
+      "human_reference_composite": 0.62,
+      "reply": "Yes, we do regularly release updates for Lightroom Classic CC to improve performance and add new features. To help you better—whether you're experiencing an issue with a recent update or just checking on what's new—could you let me know what you're experiencing? Are you having trouble installing an update, or noticing something different in how the app is working?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's question but does not directly answer whether an update was released today; instead it pivots to asking for more information about what the customer is experiencing.",
+        "factual_correctness": "The statement that Adobe regularly releases updates for Lightroom Classic CC is accurate and consistent with industry practice, though the candidate does not confirm or deny a specific update today.",
+        "faithfulness": "The reply makes only general, supportable claims about regular updates and does not invent specific dates, version numbers, features, or policies.",
+        "completeness": "The customer asked a straightforward yes/no question about whether an update was released today, but the reply does not directly answer that question or provide information about today's release status.",
+        "tone": "The tone is professional, helpful, and appropriately curious; the agent offers to assist further and invites the customer to share more context."
+      }
+    },
+    {
+      "id": "t0022",
+      "category": "technical",
+      "composite": 0.82,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.123,
+      "human_reference_composite": 0.47,
+      "reply": "We're here to help! You can reach out to your dad's driver Samuel directly through the app—just go to your trip history, select the ride from yesterday, and tap \"Contact Driver.\" If you're having trouble accessing the app, let us know and we can walk you through it. Hopefully Samuel still has the phone and can get it back to your dad quickly!",
+      "reasons": {
+        "intent_resolution": "The reply addresses the core need to contact the driver but doesn't fully resolve the customer's request to 'track down Samuel'—it assumes the customer knows how to use the app and doesn't offer alternative escalation if the driver contact fails.",
+        "factual_correctness": "The candidate correctly describes standard Uber app functionality (trip history, contact driver feature) without inventing specific facts or policies.",
+        "faithfulness": "The reply stays within reasonable bounds of what Uber support would offer—directing to the app's built-in contact feature—and does not invent unsupported policies or promises.",
+        "completeness": "The reply addresses contacting the driver but omits mention of other standard lost-item procedures (e.g., filing a lost item report, escalating to support if the driver doesn't respond, or Uber's lost-and-found process).",
+        "tone": "The tone is friendly and helpful, though it could be slightly more empathetic given the customer's urgent, distressed tone (multiple exclamation marks, all caps 'Help')."
+      }
+    },
+    {
+      "id": "t0023",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.116,
+      "human_reference_composite": 0.32,
+      "reply": "I completely understand your frustration—we should be easier to reach. Calling can definitely be faster for getting immediate answers, and I'd recommend trying that if you have a specific issue you need help with right now. That said, I'm here and ready to help via this channel too. What's going on that you need assistance with?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and offers to help, but doesn't directly answer whether calling would work better or provide concrete next steps for resolution.",
+        "factual_correctness": "The candidate makes no specific factual claims that could be incorrect; statements about calling being faster are reasonable and internally consistent.",
+        "faithfulness": "The reply avoids inventing policies, phone numbers, wait times, or unsupported promises; it stays grounded in offering help via email or suggesting the customer try calling.",
+        "completeness": "The customer's core question about whether calling works better is addressed only partially; the reply pivots to asking what the issue is rather than fully engaging with the customer's implicit request for guidance on the best contact method.",
+        "tone": "The tone is empathetic, acknowledges the customer's frustration, and remains professional and helpful throughout."
+      }
+    },
+    {
+      "id": "t0024",
+      "category": "billing",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.061,
+      "human_reference_composite": 0.37,
+      "reply": "Hi there, I'm sorry to hear your refund hasn't come through yet. I've located your order and can help get this sorted. Refunds typically process within 5-7 business days from the cancellation date, depending on your bank or payment method—sometimes it takes a bit longer to appear in your account. Can you let me know when you canceled the order so I can check the status on our end and make sure everything went through properly?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the refund issue and offers to investigate the status, but stops short of providing a definitive resolution or timeline for when the customer will receive their money.",
+        "factual_correctness": "The stated refund processing window of 5-7 business days is a standard and reasonable industry practice, and no specific false claims are made.",
+        "faithfulness": "The response avoids inventing specific policies or promises; it provides general guidance on typical refund timelines without claiming to guarantee anything beyond what is standard.",
+        "completeness": "The reply addresses the refund concern but does not acknowledge or reference the specific order and journal numbers the customer provided, which could have been used to demonstrate that the order was located and verified.",
+        "tone": "The tone is empathetic, professional, and appropriately reassuring given the customer's frustration about a missing refund."
+      }
+    },
+    {
+      "id": "t0025",
+      "category": "shipping",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.118,
+      "human_reference_composite": 0.37,
+      "reply": "Hey there! I understand how frustrating that must be—you're right that consistency matters when it comes to delivery standards. I'd like to look into this for you. Can you let me know what happened with this delivery? For example, did the driver refuse to go to the door, or was there a specific reason given? Once I have those details, I'll be able to help make this right.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the frustration and commits to investigating, but stops short of taking concrete action—it asks for more details rather than immediately escalating or committing to a resolution.",
+        "factual_correctness": "The candidate makes no specific factual claims about policies, dates, or amounts, and avoids inventing details; it remains internally consistent and grounded.",
+        "faithfulness": "The reply does not invent policies, promises, or unsupported facts; it appropriately asks for clarification before committing to next steps.",
+        "completeness": "The customer raised a clear complaint about delivery inconsistency (driver won't go to the door), but the candidate asks for more details rather than acknowledging the core issue directly or explaining what the standard delivery expectation is.",
+        "tone": "The tone is empathetic, professional, and appropriately acknowledges the customer's frustration while remaining helpful and solution-oriented."
+      }
+    },
+    {
+      "id": "t0026",
+      "category": "general",
+      "composite": 0.61,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 2,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 3
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.161,
+      "human_reference_composite": 0.3,
+      "reply": "I understand how frustrating this must be—being delayed at the gate with unclear communication is stressful. To help you right away, could you share your flight number so I can look into what's happening with your boarding and get you answers about the delay?",
+      "reasons": {
+        "intent_resolution": "The candidate asks for information rather than addressing the immediate crisis: the customer is currently at the gate 21 minutes past scheduled departure, and needs urgent action or explanation, not a request for flight details.",
+        "factual_correctness": "The candidate makes no specific factual claims that could be incorrect; it acknowledges a delay and offers to investigate.",
+        "faithfulness": "The candidate does not invent policies, promises, or unsupported facts; it stays within the bounds of offering to look into the situation.",
+        "completeness": "The candidate ignores the customer's pointed question about whether BA changes its service standards in Latin America ('Does BA go all latino when in latino?'), which appears to be a frustrated critique of service quality or communication.",
+        "tone": "While empathetic opening is appropriate for a frustrated customer, the response feels generic and somewhat tone-deaf to the urgency and sarcasm in the incoming email; a more direct acknowledgment of the crisis and immediate next steps would be warranted."
+      }
+    },
+    {
+      "id": "t0027",
+      "category": "technical",
+      "composite": 0.54,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 3,
+        "faithfulness": 4,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.065,
+      "human_reference_composite": 0.4,
+      "reply": "Thanks for reaching out about this. I understand your privacy concerns. To help you opt out of Nielsen measurement in our app, please go to your account settings and look for the privacy or data collection section—you should find an option there to disable Nielsen tracking. If you're having trouble locating it, let me know and I can walk you through the steps. Regarding the legality of opt-out consent, Nielsen's measurement practices are governed by industry standards and privacy regulations, though I'd recommend reviewing our privacy policy or Nielsen's own documentation for the full details on how your data is handled.",
+      "reasons": {
+        "intent_resolution": "The reply addresses the opt-out question with a general direction (account settings, privacy section) but lacks specific, actionable steps; the legality question is deflected to external documentation rather than directly answered.",
+        "factual_correctness": "The reply makes plausible claims about account settings and privacy sections but provides no verifiable specifics about where Nielsen controls actually exist in the app, creating internal uncertainty about accuracy.",
+        "faithfulness": "The reply avoids inventing specific policy details and appropriately defers to privacy policy and Nielsen documentation, though it could be more explicit about what the company can and cannot guarantee.",
+        "completeness": "The reply addresses both questions (opt-out mechanism and legality) but only partially—the opt-out guidance is vague and the legality question is largely punted to external sources rather than providing substantive explanation.",
+        "tone": "The tone is professional and empathetic to privacy concerns, with an offer to help further, though it could be warmer given the customer's evident frustration."
+      }
+    },
+    {
+      "id": "t0028",
+      "category": "account",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.079,
+      "human_reference_composite": 0.5,
+      "reply": "Hi there, I appreciate you reaching out. I'd like to help you track down that transaction. To look into this properly, could you share a few quick details: the amount that was charged, the date it went through, and the name it appeared under on your bank statement? Once I have those, I can check what's happening on your account and get you sorted.",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's core request to investigate a mysterious transaction by asking for the specific information needed to locate and resolve it.",
+        "factual_correctness": "The reply makes no unsupported factual claims and remains internally consistent with standard customer service practices for transaction investigation.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or specific outcomes, instead appropriately requesting information needed to investigate the issue.",
+        "completeness": "The reply addresses the single core issue raised (a transaction with no corresponding account record) and requests all relevant details needed to investigate it.",
+        "tone": "The tone is professional, empathetic, and reassuring—acknowledging the customer's concern while confidently offering to help resolve it."
+      }
+    },
+    {
+      "id": "t0029",
+      "category": "technical",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.059,
+      "human_reference_composite": 0.43,
+      "reply": "Hi there, thanks for reaching out. I appreciate you checking on this—I want to make sure I'm giving you accurate information, but I don't have visibility into our current route schedules or any planned changes to the SFO-LAS service. Could you share the link to the page you're seeing, or let me know when you noticed this? That'll help me track down the right details for you or connect you with someone who can confirm what's happening with that route.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's concern and takes a step toward resolution by asking for more information, but does not directly answer or resolve the core question about whether nonstops between SFO and LAS are ending.",
+        "factual_correctness": "The candidate makes no unsupported factual claims and appropriately acknowledges a lack of visibility into route schedules rather than inventing information.",
+        "faithfulness": "The reply avoids inventing policies, dates, or commitments and honestly states the limits of the agent's knowledge.",
+        "completeness": "The reply addresses the customer's question but does not provide a complete resolution path; it requests additional information (the link) but does not commit to a timeline or clear next step for getting the answer.",
+        "tone": "The tone is professional, courteous, and appropriately empathetic to the customer's concern about a potential service change."
+      }
+    },
+    {
+      "id": "t0030",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.062,
+      "human_reference_composite": 0.36,
+      "reply": "Hi there! Thanks for getting in touch. I'm glad you're enjoying your journey on the East Coast train otherwise! Unfortunately, I'm not able to arrange for blinds to be fitted on the train itself, but I'd recommend speaking to the onboard staff—they may be able to help you find a seat in a different area of the carriage where the glare is less of an issue. They're there to help make your journey as comfortable as possible.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's complaint and offers a practical workaround (speaking to onboard staff for seat relocation), but does not directly address whether blinds could be fitted as a longer-term solution or escalate the suggestion to management.",
+        "factual_correctness": "The candidate correctly identifies that it cannot unilaterally fit blinds and appropriately suggests the onboard staff as a resource, which is internally consistent and reasonable.",
+        "faithfulness": "The reply avoids inventing policies or promises; it honestly states what the candidate cannot do and offers a genuine alternative without overcommitting.",
+        "completeness": "The reply addresses the core issue (sun glare preventing screen visibility) and offers a practical immediate solution, but does not acknowledge or explore whether the customer's broader suggestion about fitting blinds could be escalated as feedback to management.",
+        "tone": "The tone is friendly, empathetic (acknowledging the positive aspects of the journey), and helpful without being dismissive of the customer's concern."
+      }
+    },
+    {
+      "id": "t0031",
+      "category": "general",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.264,
+      "human_reference_composite": 0.71,
+      "reply": "Thanks for getting in touch. I understand your frustration about the item you ordered. Please go ahead and send over that evidence whenever you're ready, and we'll look into what happened and work toward making this right for you.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's concern and invites evidence, but the incoming email is vague about what the actual issue is, making it difficult to assess whether the reply truly resolves the underlying problem.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it remains general and non-committal, avoiding any unsupported assertions.",
+        "faithfulness": "The reply does not invent policies, prices, or promises—it simply acknowledges the concern and requests evidence, which is a reasonable and supported approach.",
+        "completeness": "The incoming email is extremely vague and lacks detail about what the actual issue is, but the reply does not attempt to clarify what specifically changed or what the customer's concern entails, leaving the conversation incomplete.",
+        "tone": "The tone is professional and empathetic, appropriately acknowledging frustration, though it could be slightly warmer given the customer's evident irritation."
+      }
+    },
+    {
+      "id": "t0032",
+      "category": "technical",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.084,
+      "human_reference_composite": 0.42,
+      "reply": "I'm sorry you're having trouble with your order and that the support resources haven't been helpful so far. I'd like to get this sorted for you right away. Could you share your order number so I can look into the status and see what's happening on our end? Once I have that, I can give you a real update and work toward a resolution rather than just asking you to wait.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and commits to investigating, but stops short of providing the immediate resolution or status update the customer is demanding—it requests information rather than acting on what may already be available.",
+        "factual_correctness": "The candidate makes no specific factual claims about orders, policies, or timelines that could be incorrect; all statements are appropriately general and conditional.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or promises; it only commits to investigating and providing an update once the order number is provided.",
+        "completeness": "The customer mentioned order details and a lack of status updates, but the candidate does not acknowledge or reference the specific order details the customer says to 'see'—it asks for the order number instead of working with what may already be visible.",
+        "tone": "The tone is empathetic, acknowledges the customer's frustration, and conveys genuine intent to help rather than dismiss their concerns."
+      }
+    },
+    {
+      "id": "t0033",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.094,
+      "human_reference_composite": 0.51,
+      "reply": "We sincerely apologize that your complaint didn't receive the timely response it deserved. That's not the standard of service we aim for, and we take your feedback seriously. We're here to help and would genuinely like to understand what's happened so we can make it right. Could you please share the details of your complaint with us again? We'll prioritize getting you a proper resolution.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the core complaint (lack of timely response) and invites the customer to re-share details, but stops short of committing to a specific resolution timeline or escalation path.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it acknowledges a service gap and requests information without inventing details.",
+        "faithfulness": "The reply avoids inventing policies, timelines, or promises beyond a commitment to prioritize and help; it stays grounded in what can be reasonably offered.",
+        "completeness": "The reply addresses the customer's frustration about lack of response but does not explicitly acknowledge or address the secondary complaint about needing to be insulting to get attention.",
+        "tone": "The tone is appropriately empathetic, professional, and non-defensive in the face of an upset customer; it validates their frustration without being dismissive."
+      }
+    },
+    {
+      "id": "t0034",
+      "category": "technical",
+      "composite": 0.84,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 4,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.11,
+      "human_reference_composite": 0.49,
+      "reply": "I sincerely apologize for the frustration—a two-month wait is unacceptable, and missing the promised call today makes this worse. I want to get this resolved for you right away. Can you let me know your Apple ID email address so I can look into what's happened with your reset request and escalate this immediately? I'll also make sure someone reaches out to you today to get this sorted.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the core frustration and commits to immediate escalation and follow-up, but stops short of guaranteeing a specific resolution timeline or confirming the promised 4:15 call will be honored.",
+        "factual_correctness": "The candidate accurately reflects the customer's stated wait time (2 months) and the missed promised call, with no invented facts or contradictions.",
+        "faithfulness": "The reply appropriately expresses accountability and commits to escalation without inventing specific policies or refund amounts, though the promise of 'someone reaches out to you today' could be risky if not internally feasible.",
+        "completeness": "The reply addresses the two-month wait and missed call, but does not explicitly acknowledge or commit to honoring the original 4:15 call promise or explain why it was missed.",
+        "tone": "The tone is appropriately empathetic, validating the customer's frustration ('unacceptable,' 'makes this worse'), and professional while conveying urgency and accountability."
+      }
+    },
+    {
+      "id": "t0035",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.043,
+      "human_reference_composite": 0.37,
+      "reply": "Thanks for reaching out. I can see you've provided your case reference numbers, and I understand how frustrating it must be to wait weeks without an update after submitting all your documentation. Let me look into this for you right away and get you an update on where things stand with your case. Can you let me know which department or service this case is related to so I can pull up the correct file and give you a proper status?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and commits to investigating, but stops short of actually providing the status update or resolution the customer is seeking—it asks for clarification instead of moving toward closure.",
+        "factual_correctness": "The candidate correctly references the case numbers provided and makes no unsupported factual claims; all statements are internally consistent and grounded in the incoming email.",
+        "faithfulness": "The reply avoids inventing policies, timelines, or promises; it only commits to looking into the case and providing an update, which is a reasonable and supported commitment.",
+        "completeness": "The customer's core request is for a status update on a stalled case, but the candidate asks for additional information (department/service) rather than attempting to resolve or provide the update with the reference numbers already supplied.",
+        "tone": "The tone is empathetic, professional, and appropriately acknowledges the customer's frustration while maintaining a helpful and responsive demeanor."
+      }
+    },
+    {
+      "id": "t0036",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.04,
+      "human_reference_composite": 0.14,
+      "reply": "I completely understand your frustration—that's definitely a feature that should be working smoothly for you. I've escalated this playlist creation issue to our product team so they can prioritize getting it fixed. I don't have a specific timeline to share just yet, but we're treating this as a priority. In the meantime, if you find any workarounds or if the issue changes in any way, please let us know and we'll keep you updated as soon as we have news on a resolution.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the frustration and commits to escalation, but does not provide concrete next steps, timeline, or a clear path to resolution that would fully satisfy the customer's request for 'news on a solution.'",
+        "factual_correctness": "The reply makes no specific factual claims that could be contradicted; it appropriately avoids inventing timelines, policy details, or promises.",
+        "faithfulness": "The response stays within reasonable bounds—escalating to the product team and offering to follow up are standard support actions not contradicted by the incoming email.",
+        "completeness": "The reply addresses the core complaint about playlist creation but does not explicitly acknowledge or respond to the customer's implied request for a status update or ETA, leaving that dimension somewhat incomplete.",
+        "tone": "The tone is empathetic, professional, and appropriately validates the customer's frustration while maintaining a helpful and collaborative stance."
+      }
+    },
+    {
+      "id": "t0037",
+      "category": "general",
+      "composite": 0.37,
+      "passed": false,
+      "scores": {
+        "intent_resolution": 2,
+        "factual_correctness": 3,
+        "faithfulness": 2,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": true,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.119,
+      "human_reference_composite": 0.28,
+      "reply": "I understand how frustrating this is—we're aware of the issue with the \"I️\" character and are actively working on a fix. In the meantime, there's a workaround available that should help you get around it. Let me know if you'd like details on that, or if the issue persists, feel free to reach out and we'll get you sorted.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges frustration but fails to provide concrete resolution—it only offers a vague 'workaround' without details and defers action to the customer to ask for help.",
+        "factual_correctness": "The candidate claims awareness of an 'I️' character issue and states a fix is 'actively working on,' but the incoming email provides no context about what system, product, or specific problem is meant, making it impossible to verify these claims are accurate.",
+        "faithfulness": "The candidate invents a specific technical issue ('I️ character problem') and claims the company is 'actively working on a fix' without any evidence from the incoming email that such a known issue or fix effort exists.",
+        "completeness": "The incoming email is vague and emotional but demands a fix; the candidate does not commit to any concrete action, timeline, or escalation—it merely offers to discuss a workaround if the customer asks.",
+        "tone": "The tone is empathetic and professional, appropriately acknowledging the customer's frustration, though it could be more action-oriented given the urgent tone of the complaint."
+      }
+    },
+    {
+      "id": "t0038",
+      "category": "general",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.09,
+      "human_reference_composite": 0.3,
+      "reply": "Hey there! I'd love to help you get caught up on those episodes. To better understand what's going on, could you let me know if you're having trouble accessing the show through our app or website, or if there's a different issue preventing you from watching? Once I know what's happening, I can point you in the right direction.",
+      "reasons": {
+        "intent_resolution": "The reply attempts to help but makes an assumption that the customer has a technical access issue, when the incoming email is vague about whether the problem is missing episodes, account access, or something else entirely.",
+        "factual_correctness": "The candidate makes no specific factual claims about policies, episodes, or account details, so there are no factual errors to evaluate.",
+        "faithfulness": "The reply does not invent any policies, prices, promises, or unsupported facts; it only asks clarifying questions.",
+        "completeness": "The incoming email is cryptic but mentions missing three episodes of S.3 HTGAWM; the candidate does not acknowledge or address the specific show/season/episode concern, only asks generic troubleshooting questions.",
+        "tone": "The tone is friendly and helpful, though it could be slightly more empathetic to the customer's apparent frustration (\"Won't let me be great\")."
+      }
+    },
+    {
+      "id": "t0039",
+      "category": "shipping",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.154,
+      "human_reference_composite": 0.58,
+      "reply": "I'm truly sorry your package didn't arrive as promised—I understand how frustrating that is, especially with Thanksgiving plans. I'd like to help get this sorted for you right away. Could you please share your order number so I can look into the delivery status and explore what options we have to make this right?",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and commits to investigating the delivery issue, but stops short of actually resolving it—it requests information rather than providing concrete next steps or solutions.",
+        "factual_correctness": "The candidate correctly identifies that a package failed to arrive on the promised Wednesday delivery date, with no invented facts or unsupported claims.",
+        "faithfulness": "The reply avoids making specific promises about refunds, replacements, or compensation; it appropriately asks for the order number before committing to any action.",
+        "completeness": "The reply addresses the core issue (late delivery) and the customer's frustration, but does not acknowledge or respond to the emotional impact on their Thanksgiving weekend plans beyond a brief empathetic phrase.",
+        "tone": "The tone is appropriately empathetic and apologetic for the inconvenience, matching the customer's clear frustration while remaining professional and solution-focused."
+      }
+    },
+    {
+      "id": "t0040",
+      "category": "general",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.089,
+      "human_reference_composite": 0.49,
+      "reply": "I can see you're frustrated, and I sincerely apologize for whatever issues you've experienced with us. To help you properly, I need a bit more detail about what's gone wrong—could you let me know what the specific problems have been? Once I understand what happened, I'll do my best to make this right and find a real solution for you.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges frustration but does not resolve the underlying issue because the incoming email is too vague to act on; requesting clarification is reasonable but leaves the customer's core concern unaddressed.",
+        "factual_correctness": "The reply makes no specific factual claims and contains no internal contradictions or unsupported assertions.",
+        "faithfulness": "The reply avoids inventing policies, promises, or specific facts; it only offers empathy and a request for more information.",
+        "completeness": "The incoming email is cryptic and incomplete, but the candidate does not attempt to clarify what 'First it was now it's' means or probe for the missing context needed to fully understand the complaint.",
+        "tone": "The tone is appropriately empathetic and professional for a frustrated customer, though it could have acknowledged the vagueness of the complaint more directly to show understanding of the communication breakdown."
+      }
+    },
+    {
+      "id": "t0041",
+      "category": "shipping",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.086,
+      "human_reference_composite": 0.27,
+      "reply": "Thank you for raising this concern. We take customer privacy and comfort seriously, and drivers shouldn't be lingering while you're unpacking—that's not how our service is meant to work. Could you let me know which delivery this was (approximate date and time, or order number if you have it) so we can look into what happened and speak with the driver involved? In the meantime, you're always welcome to ask drivers to wait outside or return once you've finished unpacking, and we'll make a note on your account if you'd prefer this going forward.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the concern and offers to investigate, but stops short of committing to concrete corrective action or policy change, leaving the resolution somewhat open-ended.",
+        "factual_correctness": "The reply makes no unsupported factual claims and remains internally consistent with standard customer service practices.",
+        "faithfulness": "The reply avoids inventing specific policies or promises, instead offering reasonable next steps (investigation, account notes) that are typical for service issues.",
+        "completeness": "The reply addresses the core complaint and offers solutions, but the incoming email is somewhat fragmented and unclear (cuts off mid-sentence with 'drivers come in amp assist'), so it's unclear if all concerns were captured.",
+        "tone": "The tone is empathetic, professional, and appropriately validates the customer's privacy concern while offering practical solutions."
+      }
+    },
+    {
+      "id": "t0042",
+      "category": "billing",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.086,
+      "human_reference_composite": 0.38,
+      "reply": "I understand your frustration with being charged the maximum fare for an incomplete journey. To help sort this out, could you let me know which date this happened and whether you have your journey details handy? Once I have those, I can look into getting this corrected for you right away.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the core issue (overcharge for incomplete journey) and commits to investigating and correcting it, but stops short of immediately resolving the problem without first gathering more information.",
+        "factual_correctness": "The candidate correctly understands the customer's complaint about being charged maximum fare despite an incomplete journey and makes no unsupported factual claims.",
+        "faithfulness": "The reply avoids inventing specific refund amounts, policies, or promises beyond a reasonable commitment to investigate and correct the issue based on provided details.",
+        "completeness": "The reply addresses the main complaint but could have acknowledged the specific detail about no barriers at Elephant & Castle or the tube exit at Paddington to show fuller understanding of the situation.",
+        "tone": "The tone is empathetic ('I understand your frustration'), professional, and appropriately responsive to a customer complaint without being defensive."
+      }
+    },
+    {
+      "id": "t0043",
+      "category": "general",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.211,
+      "human_reference_composite": 0.9,
+      "reply": "Thanks so much for taking the time to share this feedback—it really means a lot to us! We're delighted that Simon was able to help you get your upgrade sorted, and we appreciate you letting us know about the positive experience. We'll make sure to pass your kind words along to the team. Enjoy your upgrade!",
+      "reasons": {
+        "intent_resolution": "The reply fully addresses the customer's request to pass along positive feedback about the service experience and acknowledges the successful resolution of their upgrade.",
+        "factual_correctness": "The reply accurately reflects the facts presented in the incoming email: a positive interaction with Simon, a successful upgrade, and a request to pass feedback to the team.",
+        "faithfulness": "The reply makes no unsupported claims or invented policies; it simply acknowledges the feedback and commits to passing it along, which is a standard and appropriate response.",
+        "completeness": "The reply covers all the key points: acknowledgment of the feedback, recognition of Simon's help, the successful upgrade, and the commitment to share the message with the team.",
+        "tone": "The tone is warm, appreciative, and professional—perfectly suited to a customer sharing positive feedback and expressing satisfaction."
+      }
+    },
+    {
+      "id": "t0044",
+      "category": "general",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.12,
+      "human_reference_composite": 0.48,
+      "reply": "Thanks for reaching out. I appreciate you sharing the details, but I'm not able to see the quoted tweet or image you're referring to in this email. Could you describe the issue you're experiencing with dragging and center snapping on the canvas? Once I understand what's happening, I'll be better positioned to help you get this sorted.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's issue but does not resolve it; instead, it asks for clarification rather than attempting to troubleshoot or address the reported problem directly.",
+        "factual_correctness": "The candidate correctly identifies that the quoted tweet/image is not visible in the email and accurately describes what information is missing.",
+        "faithfulness": "The reply makes no unsupported claims or invented policies; it only requests clarification based on what is actually missing from the email.",
+        "completeness": "The reply does not address the core issue (center snap functionality on canvas) substantively; it only requests more information without attempting to help with the stated problem.",
+        "tone": "The tone is professional and polite, though it could be slightly more empathetic given the customer's apparent frustration with the feature regression."
+      }
+    },
+    {
+      "id": "t0045",
+      "category": "general",
+      "composite": 0.82,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 4,
+        "faithfulness": 4,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.085,
+      "human_reference_composite": 0.71,
+      "reply": "Unfortunately, the standard messaging app doesn't display which phone number initiated a group text—you'll only see the list of participants. Your best bet would be to reach out to the person directly through another channel (a call, email, or social media) to ask for their number, or if you recognize any of the other group members, you could ask them. If you're looking for a workaround, some third-party messaging apps offer more detailed conversation metadata, though that would require switching platforms. Let me know if you'd like suggestions for alternatives!",
+      "reasons": {
+        "intent_resolution": "The reply addresses the core question about determining which phone initiated the group text and provides practical alternatives, though it doesn't fully resolve the customer's underlying need to identify and save the person's contact.",
+        "factual_correctness": "The statement that standard messaging apps don't display the initiator is reasonable and internally consistent, though the claim about third-party apps offering 'detailed conversation metadata' is somewhat vague and not definitively verifiable from the incoming email context.",
+        "faithfulness": "The reply avoids inventing specific features or policies, but the suggestion about third-party apps offering metadata is presented without clear support and could be seen as slightly speculative.",
+        "completeness": "The reply addresses the customer's question about identifying the initiator, acknowledges the constraint (not wanting to mass-text the group), and offers multiple alternative approaches (direct contact, asking other members, third-party apps).",
+        "tone": "The tone is helpful, empathetic to the customer's situation, and professional throughout, with a friendly closing offer to provide more suggestions."
+      }
+    },
+    {
+      "id": "t0046",
+      "category": "technical",
+      "composite": 0.71,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 3,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 2,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.074,
+      "human_reference_composite": 0.54,
+      "reply": "Hi there, thanks for reaching out. I appreciate you letting us know you're disappointed, and I'd like to help. However, I'm not seeing any previous messages in our system on this thread. Could you please share the details of what happened or paste the message you're referring to? Once I understand the issue, I'll do my best to find a resolution for you.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration but does not resolve the underlying issue, instead asking for clarification that the customer may have already provided elsewhere.",
+        "factual_correctness": "The candidate makes no unsupported factual claims and accurately reflects that no messages are visible in the current thread.",
+        "faithfulness": "The reply contains no invented policies, promises, or facts beyond what is supported by the incoming email and the candidate's own system visibility.",
+        "completeness": "The customer references previous messages ('Please see your messages thanks') but the candidate does not attempt to locate or reference those messages in other channels or systems, leaving the core complaint unaddressed.",
+        "tone": "The tone is professional and empathetic to the customer's disappointment, though it could be slightly warmer given the customer's evident frustration."
+      }
+    },
+    {
+      "id": "t0047",
+      "category": "technical",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.067,
+      "human_reference_composite": 0.61,
+      "reply": "Hi there, I'm sorry to hear you're experiencing battery drain issues with iOS 11 on your iPhone 6. I'd like to help get this sorted out for you.\n\nTo better understand what's happening, could you share a bit more detail about when you notice the battery draining most—for example, is it happening during specific activities, or is it constant throughout the day? Also, have you tried the standard troubleshooting steps like force-closing the app, restarting your device, or checking if there's a newer app update available? Let me know what you find, and we can take it from there.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the battery drain complaint and offers to help, but stops short of committing to a concrete fix or escalation path—it only requests more information and suggests basic troubleshooting.",
+        "factual_correctness": "The candidate correctly identifies the customer's device (iPhone 6) and the reported issue (battery drain with iOS 11) without inventing any unsupported facts.",
+        "faithfulness": "The reply avoids promising specific fixes, policies, or refunds; it stays grounded in offering support and requesting clarification, which is appropriate given the vague incoming complaint.",
+        "completeness": "The customer mentioned 'a ton of issues' beyond battery drain but the reply focuses only on battery drain and does not ask about or address the other unspecified problems.",
+        "tone": "The tone is empathetic, professional, and appropriately supportive for a customer complaint, opening with an apology and offering genuine help."
+      }
+    },
+    {
+      "id": "t0048",
+      "category": "technical",
+      "composite": 1.0,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.145,
+      "human_reference_composite": 0.64,
+      "reply": "I'm sorry to hear you had that experience today—that's not the level of service we strive for, and I appreciate you letting us know. I'd like to help you with your Companion Pass right now. Can you tell me what specific issue you were trying to resolve with it, and I'll walk you through it or get you the right support?",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's complaint about poor service and offers immediate help with the Companion Pass issue they were trying to resolve.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it appropriately acknowledges the complaint and offers assistance without inventing details.",
+        "faithfulness": "The reply stays grounded in what the customer stated—poor service experience and need for Companion Pass help—without inventing policies, promises, or unsupported commitments.",
+        "completeness": "The reply addresses both the customer's complaint about the service experience and their underlying need for Companion Pass assistance, and invites them to share the specific issue.",
+        "tone": "The tone is empathetic and apologetic in response to a service complaint, professional, and genuinely helpful without being defensive or dismissive."
+      }
+    },
+    {
+      "id": "t0049",
+      "category": "shipping",
+      "composite": 0.95,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 5,
+        "faithfulness": 4,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.119,
+      "human_reference_composite": 0.54,
+      "reply": "I completely understand your frustration—unwanted sales calls are annoying, especially when you're already a loyal customer with a premium package. We don't want to lose you, and I'm sorry we missed the mark here. Please reply with your account number or the phone number associated with your account, and I'll make sure to flag this so our sales team stops contacting you about upgrades. We'll get this sorted right away.",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's core complaint about unwanted sales calls and offers a concrete solution to prevent future contact.",
+        "factual_correctness": "The reply makes no specific factual claims that could be verified against the email; it acknowledges the customer's stated situation (triple play package, high monthly cost, unwanted calls) without contradiction.",
+        "faithfulness": "The reply appropriately offers to flag the account and stop sales calls, though it could be slightly more cautious about guaranteeing 'right away' resolution without knowing internal processes.",
+        "completeness": "The reply addresses the single core issue raised—unwanted upgrade sales calls—and requests the information needed to take action.",
+        "tone": "The tone is empathetic and validating of the customer's frustration while remaining professional and solution-focused, appropriate for a complaint situation."
+      }
+    },
+    {
+      "id": "t0050",
+      "category": "technical",
+      "composite": 0.83,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 4,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.072,
+      "human_reference_composite": 0.4,
+      "reply": "Thanks for reaching out! I understand how frustrating that must be—it's great that your AppleTV is working well on the wired connection, but I can see why you'd want to use your phone as a remote too. \n\nThe issue you're running into is that Apple's Remote app requires your phone and AppleTV to be on the same network (WiFi or wired). Since your AppleTV is wired and your phone connects via WiFi, they're technically on different networks, which is why the remote can't discover it.\n\nHere are a couple of options: you can connect your AppleTV to WiFi instead of wired (if that works for your setup), or if you need to keep it wired, you could try connecting your phone to the same WiFi network your AppleTV uses—many routers bridge wired and wireless devices on the same network, so this might actually work. If you'd like to troubleshoot further, let me know your router model and I can give you more specific guidance.",
+      "reasons": {
+        "intent_resolution": "The candidate addresses the core problem and offers two viable solutions, but doesn't fully resolve the issue—it leaves the customer to try the suggestions without confirming whether they'll work or offering a definitive path forward.",
+        "factual_correctness": "The explanation that the Remote app requires devices on the same network is reasonable and internally consistent, though the claim that wired and WiFi are 'technically on different networks' is slightly imprecise—most home routers bridge them, which the candidate acknowledges later.",
+        "faithfulness": "The candidate avoids inventing specific policies, product features, or unsupported claims; all statements are general troubleshooting guidance consistent with typical Apple Remote behavior.",
+        "completeness": "The candidate addresses the main complaint and offers two workarounds, but doesn't explore other potential solutions (e.g., checking network settings, ensuring both devices are on the same subnet, or suggesting Apple Support if the issue persists).",
+        "tone": "The tone is empathetic, acknowledges the customer's frustration, validates their working setup, and maintains a helpful, professional demeanor throughout."
+      }
+    },
+    {
+      "id": "t0051",
+      "category": "general",
+      "composite": 0.82,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 4
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.088,
+      "human_reference_composite": 0.27,
+      "reply": "I sincerely apologize that you haven't received a response to your direct messages—that's frustrating, especially during the holidays when timing matters most. I want to help you get answers right now. Could you let me know what specific issue you're waiting on a timeline for? Once I understand what you need, I'll give you a clear answer and make sure we get this resolved for you.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and offers to help, but doesn't directly answer the timeline question they asked—it asks for clarification instead, which is reasonable given the vague incoming email but delays resolution.",
+        "factual_correctness": "The candidate makes no specific factual claims that could be incorrect; it appropriately avoids inventing details about the customer's situation.",
+        "faithfulness": "The reply contains no invented policies, promises, or unsupported commitments—it only offers to help and asks for clarification.",
+        "completeness": "The incoming email is fragmented and lacks clear context, but the candidate addresses the lack of response to DMs and the timeline question; however, it doesn't acknowledge the customer's broader frustration about holiday service or the accusation of unfair practices.",
+        "tone": "The tone is professional and empathetic, acknowledging frustration and the holiday context, though it could have validated the customer's emotional complaint more directly before pivoting to problem-solving."
+      }
+    },
+    {
+      "id": "t0052",
+      "category": "technical",
+      "composite": 0.93,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.031,
+      "human_reference_composite": 0.2,
+      "reply": "Happy Halloween! Thanks for the fun message—hope you enjoyed those burritos! However, it looks like this might have been sent to us by mistake. If you have any questions or issues with your service that we can help with, please feel free to reach out and we'll be happy to assist.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately recognizes that this appears to be a casual, off-topic message rather than a service request, and invites the customer to reach out with actual issues, though it doesn't fully resolve what seems to be a mistaken send.",
+        "factual_correctness": "The candidate makes no specific factual claims that could be incorrect; it responds generically and appropriately to what appears to be a misdirected personal message.",
+        "faithfulness": "The reply contains no invented policies, promises, or unsupported claims; it simply acknowledges the message and offers standard support availability.",
+        "completeness": "Given that the incoming email is not a service request but a casual Halloween greeting, the candidate appropriately addresses the situation by acknowledging it and offering to help with actual issues.",
+        "tone": "The tone is warm, friendly, and appropriately matches the casual, lighthearted nature of the incoming message while remaining professional and helpful."
+      }
+    },
+    {
+      "id": "t0053",
+      "category": "billing",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.078,
+      "human_reference_composite": 0.65,
+      "reply": "Hi there,\n\nI'm sorry to hear you had a frustrating experience with our sales rep. We take feedback about our team's responsiveness seriously, and I'd like to help make this right. Could you tell me a bit more about what payment issues you were trying to discuss? Once I understand what's going on, I can either help resolve it directly or make sure you're connected with someone who can give your concerns the attention they deserve.",
+      "reasons": {
+        "intent_resolution": "The reply appropriately acknowledges the customer's frustration and seeks clarification to move toward resolution, though it stops short of committing to a specific next step.",
+        "factual_correctness": "The reply makes no specific factual claims that could be incorrect; it responds appropriately to the information provided in the incoming email.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or specific commitments; it only offers general support and asks for more information.",
+        "completeness": "The incoming email is incomplete (subject line cuts off mid-sentence), but the candidate addresses the core complaint about the sales rep's responsiveness without addressing what the actual payment issues are—though this requires customer input to resolve.",
+        "tone": "The tone is empathetic, professional, and appropriately apologetic for the customer's frustration while remaining constructive and solution-focused."
+      }
+    },
+    {
+      "id": "t0054",
+      "category": "billing",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.115,
+      "human_reference_composite": 0.68,
+      "reply": "I'm sorry you're experiencing these issues with your iPhone 7 Plus—that's definitely frustrating. We'd like to help get this sorted out for you. To better understand what's happening, could you let me know which app or apps are glitching and freezing? Also, when did you install the update, and have you tried restarting your phone or reinstalling the affected app? In the meantime, we can look into whether there's a known issue on our end that might be causing the slower charging.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and offers to help, but stops short of committing to a concrete resolution path—it asks diagnostic questions rather than proposing next steps like a replacement, rollback, or escalation.",
+        "factual_correctness": "The reply makes no unsupported factual claims and correctly identifies the device model (iPhone 7 Plus) and the general nature of the reported issues.",
+        "faithfulness": "The reply avoids inventing policies, refund amounts, or specific remedies; it only asks clarifying questions and offers to investigate, which is appropriate given the limited information.",
+        "completeness": "The reply addresses the glitching, freezing, and charging issues, but does not acknowledge or respond to the customer's threat to switch to Samsung—a signal of urgency and dissatisfaction that warrants at least a retention-focused acknowledgment.",
+        "tone": "The tone is empathetic, professional, and appropriately reassuring; it validates the customer's frustration while maintaining a helpful, collaborative stance."
+      }
+    },
+    {
+      "id": "t0055",
+      "category": "general",
+      "composite": 0.85,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.071,
+      "human_reference_composite": 0.46,
+      "reply": "I'd be happy to help get this sorted. Since you've already checked the basics—power supply, connections, and everything's secure—let's dig a bit deeper. Can you tell me what device or equipment you're troubleshooting, and what specifically isn't working (for example, is it not turning on, not responding, showing an error, etc.)? That'll help me point you toward the right next steps.",
+      "reasons": {
+        "intent_resolution": "The reply acknowledges the customer's frustration and moves toward resolution by asking clarifying questions, but doesn't yet provide concrete troubleshooting steps or next actions.",
+        "factual_correctness": "The candidate accurately reflects back what the customer has already tried (power supply, connections, security) without inventing any unsupported facts.",
+        "faithfulness": "The reply makes no unsupported promises, policies, or invented details—it only asks for clarification to better assist.",
+        "completeness": "The customer's core issue is unclear (device type, specific symptom), so the candidate appropriately asks for details, but the incoming email is too vague to fully assess whether all points are covered.",
+        "tone": "The tone is empathetic, professional, and reassuring—acknowledging the customer's effort and frustration while remaining solution-focused."
+      }
+    },
+    {
+      "id": "t0056",
+      "category": "technical",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.096,
+      "human_reference_composite": 0.57,
+      "reply": "I'm sorry to hear your account may have been compromised—that's definitely concerning. Unfortunately, resetting an Apple ID is handled directly by Apple rather than our team, so you'll want to go to iforgot.apple.com or contact Apple Support directly to regain access to your account and update the phone number on file.\n\nIn the meantime, if you have any issues with our service or your account with us, please let me know and I'm happy to help sort that out.",
+      "reasons": {
+        "intent_resolution": "The reply correctly identifies that Apple ID resets are outside the support team's scope and directs the customer to the appropriate resource (iforgot.apple.com and Apple Support), which addresses the core intent, though it could have been slightly more proactive in offering interim account security steps.",
+        "factual_correctness": "The response accurately states that Apple ID resets are handled by Apple directly and correctly points to iforgot.apple.com as the official Apple resource, with no factual errors or unsupported claims.",
+        "faithfulness": "The reply makes no unsupported promises, invented policies, or claims beyond what is reasonable—it appropriately acknowledges the scope limitation and offers to help with company-specific issues if applicable.",
+        "completeness": "The reply addresses the main question (how to reset Apple ID) and offers follow-up support for company-related issues, but does not provide additional security guidance (e.g., checking for unauthorized purchases, enabling two-factor authentication once access is regained) that would be helpful for a hacked account.",
+        "tone": "The tone is empathetic, acknowledges the customer's concern about a potential compromise, and maintains professionalism while clearly explaining the limitation and next steps."
+      }
+    },
+    {
+      "id": "t0057",
+      "category": "general",
+      "composite": 0.79,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 4,
+        "faithfulness": 5,
+        "completeness": 3,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.083,
+      "human_reference_composite": 0.24,
+      "reply": "Great question! The steps depend on which platform you're using. On PlayStation, you can check your purchase and transaction history by going to Settings > Account Management > Account Information > Wallet > Transaction History. For Xbox, you'll want to visit your account settings and look for \"Purchase history\" or \"Order history.\" On iPhone, you can view your App Store purchase history by opening the App Store app, tapping your profile icon in the top right, and selecting \"Purchase history.\" Let me know if you need help navigating any of these or if you're looking for something more specific!",
+      "reasons": {
+        "intent_resolution": "The reply addresses how to view gaming history across multiple platforms, but the incoming email is somewhat ambiguous (unclear grammar: 'amp via Iphone') and the candidate doesn't clarify what the customer actually means or ask for specifics before providing detailed instructions.",
+        "factual_correctness": "The instructions provided appear internally consistent and generally accurate for major platforms, though without a reference reply or access to current UI, minor details about menu paths could have shifted.",
+        "faithfulness": "The reply provides only general, well-known platform navigation steps without inventing specific policies, prices, or unsupported promises.",
+        "completeness": "The reply covers PlayStation, Xbox, and iPhone App Store, but the incoming email mentions 'gaming consoles amp via Iphone' which is grammatically unclear—the candidate doesn't ask for clarification about whether the customer wants history for specific consoles, game libraries, or account activity, leaving ambiguity unresolved.",
+        "tone": "The tone is friendly, helpful, and professional, with an open invitation for follow-up questions."
+      }
+    },
+    {
+      "id": "t0058",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 5,
+        "factual_correctness": 4,
+        "faithfulness": 4,
+        "completeness": 5,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.141,
+      "human_reference_composite": 0.3,
+      "reply": "Hi there, thanks for reaching out! On our long-haul economy flights, we do have USB charging ports available at most seats, which should cover phones and smaller devices. For larger devices or if you need a standard power outlet, availability can vary depending on the aircraft type and specific route. If you let me know which flight you're booked on, I can confirm the exact charging setup for your journey.",
+      "reasons": {
+        "intent_resolution": "The reply directly addresses the customer's question about charging facilities on long-haul economy flights and provides actionable information.",
+        "factual_correctness": "The response is internally consistent and plausible, though without a reference reply or company documentation, the specific claim about USB ports at most seats cannot be verified; the caveat about aircraft variation is appropriately cautious.",
+        "faithfulness": "The reply avoids inventing specific policies or guarantees, appropriately hedges with 'most seats' and 'can vary,' and offers to confirm details for the specific flight rather than making blanket promises.",
+        "completeness": "The reply fully addresses the customer's single question about charging facilities, covers both USB and standard outlets, acknowledges variability, and offers a next step to provide personalized information.",
+        "tone": "The tone is friendly, professional, and helpful—opening with thanks, using conversational language ('Hey there'), and offering personalized assistance."
+      }
+    },
+    {
+      "id": "t0059",
+      "category": "general",
+      "composite": 0.89,
+      "passed": true,
+      "scores": {
+        "intent_resolution": 4,
+        "factual_correctness": 5,
+        "faithfulness": 5,
+        "completeness": 4,
+        "tone": 5
+      },
+      "flags": {
+        "hallucination_detected": false,
+        "contradicts_reference_commitment": false
+      },
+      "lexical_overlap": 0.102,
+      "human_reference_composite": 0.56,
+      "reply": "I understand how stressful that is—I'm sorry you're dealing with a stolen card. However, I'm not able to shut off or freeze your credit card directly, as that needs to go through your bank or credit card issuer. I'd recommend calling them right away to report the theft and request an immediate freeze or cancellation.\n\nIf you have any charges on your account with us that you'd like us to look into or dispute, please let me know your booking details and I'm happy to help with that side of things.",
+      "reasons": {
+        "intent_resolution": "The reply correctly identifies that the candidate cannot directly shut off the card and appropriately redirects to the bank, but could have been more proactive in offering to help with any fraudulent charges on the company's own platform.",
+        "factual_correctness": "The reply accurately states that credit card freezing/cancellation must be handled by the bank or issuer, which is factually correct and internally consistent.",
+        "faithfulness": "The reply makes no unsupported promises or invented policies; it honestly explains the company's limitations and offers legitimate help with account-related charges.",
+        "completeness": "The reply addresses the main request and offers follow-up support for any fraudulent charges on the company's account, though it could have asked whether the customer has already contacted their bank or needs additional guidance.",
+        "tone": "The tone is empathetic, acknowledging the customer's stress while remaining professional and helpful throughout."
+      }
+    }
+  ]
+}

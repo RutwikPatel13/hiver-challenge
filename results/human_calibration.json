@@ -1,0 +1,74 @@
+{
+  "note": "human labeled 15 system replies blind (send as-is? y/n); sample stratified: all reference-free judge FAILs + random PASSes",
+  "n": 15,
+  "item_ids": [
+    "t0049",
+    "t0018",
+    "t0027",
+    "t0020",
+    "t0002",
+    "t0057",
+    "t0037",
+    "t0010",
+    "t0012",
+    "t0016",
+    "t0021",
+    "t0047",
+    "t0013",
+    "t0026",
+    "t0048"
+  ],
+  "human_labels_send": "yyyyyyynyyyyyyy",
+  "human_send_rate": 0.933,
+  "judge_pass_rate_on_sample": 0.6,
+  "agreement_with_judge": 0.533,
+  "cohens_kappa_vs_judge": -0.129,
+  "mean_composite_human_send": 0.755,
+  "mean_composite_human_reject": 0.75,
+  "disagreements": [
+    {
+      "id": "t0027",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.54
+    },
+    {
+      "id": "t0002",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.6
+    },
+    {
+      "id": "t0037",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.37
+    },
+    {
+      "id": "t0010",
+      "human_send": false,
+      "judge_pass": true,
+      "composite": 0.75
+    },
+    {
+      "id": "t0012",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.66
+    },
+    {
+      "id": "t0021",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.68
+    },
+    {
+      "id": "t0026",
+      "human_send": true,
+      "judge_pass": false,
+      "composite": 0.61
+    }
+  ],
+  "agreement_with_augmented_judge": 0.467,
+  "cohens_kappa_vs_augmented_judge": 0.091
+}

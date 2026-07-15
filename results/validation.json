@@ -1,0 +1,75 @@
+{
+  "perturbation": {
+    "flip_commitment": {
+      "target_dimension": "factual_correctness",
+      "target_flag": "contradicts_reference_commitment",
+      "mean_composite_good": 0.876,
+      "mean_composite_broken": 0.139,
+      "mean_composite_drop": 0.737,
+      "mean_factual_correctness_good_1to5": 5,
+      "mean_factual_correctness_broken_1to5": 1.75,
+      "target_dimension_drop_1to5": 3.25,
+      "hard_flag_trip_rate": 1.0
+    },
+    "hallucinate": {
+      "target_dimension": "faithfulness",
+      "target_flag": "hallucination_detected",
+      "mean_composite_good": 0.876,
+      "mean_composite_broken": 0.147,
+      "mean_composite_drop": 0.728,
+      "mean_faithfulness_good_1to5": 5,
+      "mean_faithfulness_broken_1to5": 1.58,
+      "target_dimension_drop_1to5": 3.42,
+      "hard_flag_trip_rate": 0.833
+    },
+    "make_rude": {
+      "target_dimension": "tone",
+      "target_flag": null,
+      "mean_composite_good": 0.876,
+      "mean_composite_broken": 0.599,
+      "mean_composite_drop": 0.277,
+      "mean_tone_good_1to5": 4.08,
+      "mean_tone_broken_1to5": 2.33,
+      "target_dimension_drop_1to5": 1.75,
+      "hard_flag_trip_rate": null
+    },
+    "strip_help": {
+      "target_dimension": "intent_resolution",
+      "target_flag": null,
+      "mean_composite_good": 0.876,
+      "mean_composite_broken": 0.444,
+      "mean_composite_drop": 0.432,
+      "mean_intent_resolution_good_1to5": 4.33,
+      "mean_intent_resolution_broken_1to5": 1.08,
+      "target_dimension_drop_1to5": 3.25,
+      "hard_flag_trip_rate": null
+    }
+  },
+  "discrimination": {
+    "n_pairs": 20,
+    "rubric_judge": {
+      "mean_fitting": 0.842,
+      "mean_mismatched": 0.242,
+      "separation_auc": 1.0
+    },
+    "lexical_overlap_baseline": {
+      "mean_fitting": 0.118,
+      "mean_mismatched": 0.123,
+      "separation_auc": 0.45
+    }
+  },
+  "reliability": {
+    "n_items": 10,
+    "within_judge_composite_std_mean": 0.028,
+    "within_judge_verdict_consistency": 0.9,
+    "cross_model": {
+      "judge_a": "claude-haiku-4-5",
+      "judge_b": "claude-sonnet-5",
+      "note": "over a mixed pool of good (system) + bad (mismatched) replies, so correlation reflects agreement across the full quality range",
+      "n_points": 20,
+      "mean_abs_composite_diff": 0.158,
+      "composite_correlation": 0.934,
+      "verdict_agreement": 0.75
+    }
+  }
+}

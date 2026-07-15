@@ -1,0 +1,26 @@
+{
+  "note": "does BM25 retrieval confidence predict blind-spot flips? AUC ~0.5 = no signal; the naive confidence gate is insufficient",
+  "n": 60,
+  "n_flips": 29,
+  "mean_top1_flipped": 24.96,
+  "mean_top1_ok": 23.67,
+  "auc_top1": 0.433,
+  "auc_top3_mean": 0.482,
+  "deferral_curve": {
+    "defer_lowest_20pct": {
+      "items_deferred": 12,
+      "flips_caught": 5,
+      "flips_total": 29
+    },
+    "defer_lowest_30pct": {
+      "items_deferred": 18,
+      "flips_caught": 6,
+      "flips_total": 29
+    },
+    "defer_lowest_50pct": {
+      "items_deferred": 30,
+      "flips_caught": 13,
+      "flips_total": 29
+    }
+  }
+}
