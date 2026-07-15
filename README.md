@@ -18,7 +18,7 @@ then *validated*, then *audited for its own blind spot*.
 
 ```bash
 python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
-cp .env.example .env                          # paste your ANTHROPIC_API_KEY (auto-loaded)
+cp .env.example .env                          # paste your ANTHROPIC_API_KEY (only needed for uncached inputs)
 
 ./.venv/bin/python -m unittest discover tests # offline tests, no API key needed
 ./.venv/bin/python src/build_dataset.py       # rebuild the dataset (no API key needed)
@@ -30,7 +30,10 @@ cp .env.example .env                          # paste your ANTHROPIC_API_KEY (au
 ./.venv/bin/python src/calibrate.py --make-sheet   # blind human-calibration flow (§3d)
 ```
 
-Everything is cached to `cache/`; re-runs are free. A fresh full run costs **< $1**.
+**The full LLM response cache is committed** (`cache/`, ~3 MB), so every command above reproduces
+the committed numbers byte-for-byte at **$0, with no API key** — the client is only constructed on a
+cache miss. A cache-less run from scratch (new emails, or after `rm -rf cache/`) needs a key and
+costs **< $1**.
 
 ## 1. What "accurate" means
 
@@ -98,6 +101,9 @@ touching the metric**, so the gap is mostly threshold conservatism, not broken r
 human-reject (a reply re-asking for info the customer had already given) passed the judge at 0.75 —
 a genuine judge miss worth a rubric tweak. Honest caveats: one rater, small n, and single raters
 skew lenient; the follow-up is multi-rater labels, then tuning the pass bar on them (§10).
+**Why 0.70 stays for now:** the two error types are not symmetric in a draft-suggestion product — a
+false FAIL costs an agent a quick edit, a false PASS risks a bad send — so we keep the conservative
+bar until multi-rater labels justify moving it.
 
 ## 4. System results (60 held-out emails, production mode)
 
@@ -108,6 +114,8 @@ flags: hallucination 1/60 · contradiction 0/60
 human-reply baseline (same rubric): mean 0.487 · pass-rate 0.13
 ```
 
+- **Statistical honesty:** a 0.90 pass-rate on n=60 carries a wide interval (Wilson 95% CI ≈
+  0.80–0.95) — read it as "roughly nine in ten," not a third significant digit.
 - **Real weak spot: completeness.** 5 of 6 failures are two-part questions where the reply drops one
   part; the 6th is a context-free angry email where the hallucination flag correctly fired.
   Per-dimension scoring makes this diagnosis possible — a blended number would say "0.83, fine".
@@ -136,7 +144,10 @@ every system reply was re-judged *with* the human reference, and verdicts compar
 - **Verbosity lean.** LLM judges favor fuller answers; appropriately-terse replies score low (hence
   the human baseline). Mitigated by rubric anchors + forced justifications, not eliminated.
 - **The judge is the ceiling.** Model-swappable (`MODEL_JUDGE`), cross-checked with Sonnet, but a
-  systematically biased judge biases scores; run-to-run variance quantified in §3c.
+  systematically biased judge biases scores; run-to-run variance quantified in §3c. A specific
+  instance: generator and judge share a model family (Haiku), so **self-preference bias** — LLM
+  judges favoring their own family's outputs — likely inflates the system-vs-human gap in §4; the
+  cross-family Sonnet check (corr 0.93) bounds it but does not eliminate it.
 - **Dataset is Twitter-origin and single-turn**: short, sometimes low-context, no thread history
   (real inboxes are multi-turn conversations); subject lines are synthetic.
 
@@ -211,7 +222,9 @@ results/                committed evidence (report, validation, blindspot)
 
 - Close the §5 blind spot: brand/policy profile for the generator plus brand-aware deferral (naive
   BM25-score gating tested and rejected — §5), and continuous reference-augmented audits once sent
-  replies exist.
+  replies exist. Root cause is self-inflicted: `build_dataset.py` strips `@brandhandle` before the
+  brand is recorded — keeping it as a `brand` field is a small builder change that unlocks
+  brand-filtered retrieval.
 - Scale the KB to a customer's full ticket history with quality-weighted retrieval (score past
   replies with this very rubric; prefer high scorers).
 - Extend §3d's single-rater calibration to multiple raters and tune the pass threshold on those
