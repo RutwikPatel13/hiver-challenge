@@ -1,0 +1,13 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# llm response cache (regenerable; keeps API cost at zero on re-runs)
+cache/
+
+# os
+.DS_Store
