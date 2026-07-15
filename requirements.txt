@@ -1,3 +1,6 @@
 # Only one runtime dependency. Retrieval, scoring, and dataset building use the
 # standard library so the pipeline stays reproducible and cheap to run.
-anthropic>=0.40
+# Floor = the version this repo was built and verified with; the code uses
+# structured outputs (output_config json_schema) and the `thinking` parameter,
+# which need a recent SDK.
+anthropic>=0.116
