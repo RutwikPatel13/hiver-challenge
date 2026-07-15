@@ -123,6 +123,17 @@ human-reply baseline (same rubric): mean 0.487 · pass-rate 0.13
   and often deflect; partly legitimate, partly judge verbosity-lean (§5).
 - **0.90 is the reference-free number.** With ground truth it falls to 0.42 — see §5.
 
+**Closing the loop — a measured negative result.** We used the diagnosis above to test the obvious
+fix: one added generator instruction (*"Covers EVERY distinct question or request in the email.
+Before writing, silently enumerate them; a two-part email needs both parts answered, even
+briefly."*), then re-ran the full report. Outcome: completeness **3.42 → 3.50** (barely moved),
+pass-rate **0.90 → 0.85** — within the n=60 noise band. Per-item, the variant fixed only 1 of the 6
+diagnosed failures, left 5 unchanged, and 4 previously-passing replies flipped to FAIL (one's
+completeness *dropped* 4 → 2). Takeaway: an instruction-level nudge doesn't fix coverage —
+resampling noise dominates — so the fix needs structure: extract the distinct asks first, then
+draft against that list (§10). The variant's LLM calls are in the committed cache; re-adding that
+line and re-running `src/report.py` reproduces the experiment at $0.
+
 ## 5. Honest limitations — including a measured blind spot
 
 Rather than assert the production metric's limits, we **measured them** (`src/blindspot.py`):
@@ -227,6 +238,8 @@ results/                committed evidence (report, validation, blindspot)
   brand-filtered retrieval.
 - Scale the KB to a customer's full ticket history with quality-weighted retrieval (score past
   replies with this very rubric; prefer high scorers).
+- Fix completeness structurally: a prompt-level nudge measurably failed (§4), so extract the
+  email's distinct asks as a list first, then draft and self-check the reply against that list.
 - Extend §3d's single-rater calibration to multiple raters and tune the pass threshold on those
   labels (0.70 looks conservative); length-controlled rubric anchors to debias verbosity; embedding
   or hybrid retrieval, measured with this same metric.
