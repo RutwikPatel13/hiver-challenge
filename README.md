@@ -27,6 +27,7 @@ cp .env.example .env                          # paste your ANTHROPIC_API_KEY (on
 ./.venv/bin/python src/report.py              # score the whole test set
 ./.venv/bin/python src/validate_metric.py     # validate the metric (3 experiments)
 ./.venv/bin/python src/blindspot.py           # measure the reference-free blind spot
+./.venv/bin/python src/ablation.py            # retrieval ablation: RAG vs zero-shot
 ./.venv/bin/python src/calibrate.py --make-sheet   # blind human-calibration flow (§3d)
 ```
 
@@ -185,6 +186,21 @@ grounding. *Why BM25 over embeddings?* Support tickets share salient surface voc
 downloads, fully reproducible, and swappable behind `retrieve()` — §5 shows retrieval is the
 highest-leverage upgrade target.
 
+**Measured, not assumed: the retrieval ablation** (`src/ablation.py`). Zero-shot (no retrieved
+examples) vs. RAG on all 60 test emails, same judge, both judging modes:
+
+| | RAG (k=3) | zero-shot |
+|---|---|---|
+| reference-free: mean · pass | 0.831 · 0.90 | 0.853 · 0.88 |
+| reference-augmented: mean · pass | 0.625 · 0.42 | 0.656 · 0.48 |
+
+**Grounding as implemented adds no measurable quality** (differences are within the n=60 noise
+band) — an honest null that coheres with two other findings: the KB's own replies score 0.49 on
+the rubric (§6 — imitating them isn't valuable), and retrieval is brand-blind (§5 — a wrong-brand
+example can inject wrong-brand substance). The conclusion is not "drop retrieval"; it's that
+retrieval must earn its place via quality-weighted, brand-filtered KBs (§10) — and this ablation
+is now the harness that will tell us whether any such change actually helps.
+
 **How this maps to a production shared-inbox product.** The two halves of this challenge are the two
 halves of a real support-AI suite: the generator is a reply-drafting copilot grounded in past
 conversations; the judge is an automated QA layer scoring replies against an explicit rubric.
@@ -209,6 +225,7 @@ src/run.py              end-to-end demo: email -> reply -> score
 src/report.py           whole-system scoring        -> results/report.json
 src/validate_metric.py  the three validation experiments -> results/validation.json
 src/blindspot.py        reference-free blind-spot audit  -> results/blindspot.json
+src/ablation.py         retrieval ablation (RAG vs zero-shot) -> results/ablation.json
 src/calibrate.py        blind human-calibration study    -> results/human_calibration.json
 src/confidence_check.py test naive confidence gating (offline)  -> results/confidence_check.json
 tests/                  offline unit tests (no API key)

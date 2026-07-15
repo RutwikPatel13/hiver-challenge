@@ -1,0 +1,72 @@
+{
+  "note": "RAG (k=3 few-shot from KB) vs zero-shot (no retrieved examples), same judge, both judging modes; reference-augmented is where grounding must show up (§5)",
+  "n": 60,
+  "reference_free": {
+    "rag": {
+      "mean_composite": 0.831,
+      "pass_rate": 0.9
+    },
+    "zero_shot": {
+      "mean_composite": 0.853,
+      "pass_rate": 0.883
+    }
+  },
+  "reference_augmented": {
+    "rag": {
+      "mean_composite": 0.625,
+      "pass_rate": 0.417
+    },
+    "zero_shot": {
+      "mean_composite": 0.656,
+      "pass_rate": 0.483
+    }
+  },
+  "zero_shot_detail": {
+    "reference_free": {
+      "n": 60,
+      "mean_composite": 0.853,
+      "median_composite": 0.875,
+      "pass_rate": 0.883,
+      "per_dimension_mean_1to5": {
+        "intent_resolution": 3.95,
+        "factual_correctness": 4.85,
+        "faithfulness": 4.917,
+        "completeness": 3.633,
+        "tone": 4.817
+      },
+      "hard_flag_rate": {
+        "hallucination_detected": 0.017,
+        "contradicts_reference_commitment": 0.0
+      },
+      "composite_distribution": {
+        "0.0-0.5": 0,
+        "0.5-0.7": 6,
+        "0.7-0.85": 10,
+        "0.85-1.0": 44
+      }
+    },
+    "reference_augmented": {
+      "n": 60,
+      "mean_composite": 0.656,
+      "median_composite": 0.7,
+      "pass_rate": 0.483,
+      "per_dimension_mean_1to5": {
+        "intent_resolution": 3.117,
+        "factual_correctness": 3.667,
+        "faithfulness": 4.033,
+        "completeness": 3.217,
+        "tone": 4.583
+      },
+      "hard_flag_rate": {
+        "hallucination_detected": 0.183,
+        "contradicts_reference_commitment": 0.233
+      },
+      "composite_distribution": {
+        "0.0-0.5": 19,
+        "0.5-0.7": 11,
+        "0.7-0.85": 12,
+        "0.85-1.0": 18
+      }
+    }
+  }
+}
